@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0b0f1a;
+  --foreground: #e6eaf2;
+  --muted: #9aa3b5;
+  --card: #151b2e;
+  --card-border: #242d46;
+  --primary: #5b8def;
+  --accent: #38bdf8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+  background: radial-gradient(ellipse at top, #101527 0%, #0b0f1a 55%, #0a0d16 100%);
+  background-attachment: fixed;
+}
+
+body {
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* Markdown 内容样式 */
+.markdown {
+  line-height: 1.8;
+  color: var(--foreground);
+}
+
+.markdown h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.markdown h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.markdown p {
+  margin: 1rem 0;
+}
+
+.markdown a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.markdown ul {
+  list-style: disc;
+}
+
+.markdown ol {
+  list-style: decimal;
+}
+
+.markdown li {
+  margin: 0.25rem 0;
+}
+
+.markdown blockquote {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--primary);
+  color: var(--muted);
+  background: var(--card);
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.markdown pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: var(--card);
+  overflow-x: auto;
+}
+
+.markdown code {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.9em;
+}
+
+.markdown :not(pre) > code {
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  background: var(--card);
+}
+
+.markdown pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown img {
+  max-width: 100%;
+  border-radius: 0.5rem;
+}
+
+.markdown hr {
+  margin: 2rem 0;
+  border: 0;
+  border-top: 1px solid var(--card-border);
+}
